@@ -1,0 +1,17 @@
+@mixin GenerateRootVariables($colorList) {
+    :root{ 
+      @each $paletteName, $shadeList in $colorList {
+        @each $colorName , $colorValue in $shadeList{ 
+          --#{$PREEFIX}-#{$paletteName}-#{$colorName}: #{$colorValue};
+        }
+      }
+        @each $colorName , $colorValue in $grey-shades{ 
+          --#{$PREEFIX}-#{$colorName}: #{$colorValue};
+        }
+        @each $colorName , $colorValue in $state-color{ 
+          --#{$PREEFIX}-#{$colorName}: #{$colorValue};
+        }
+     
+      --#{$PREEFIX}-font-family: #{$font-family};
+    }
+  }

@@ -1,0 +1,33 @@
+$PREEFIX : "ku" !default;
+
+
+$primary-color-palette: GenerateColorShade(#9068be) !default;
+$secondary-color-palette: GenerateColorShade(#3fc1c9) !default;
+$accent-color-palette: GenerateColorShade(#e62739) !default;
+ 
+
+$base-colors : (
+  primary : $primary-color-palette,
+  secondary : $secondary-color-palette,
+  accent : $accent-color-palette,
+) !default;
+
+$grey-shades:(
+  light: #ffffff,
+  white-smoke: #F5F5F5,
+  light-gray: #D3D3D3,
+  'silver': #C0C0C0,
+  dark-gray: #A9A9A9,
+  grey: #808080,
+  grey-900: #212121,
+  dark: #000000
+) !default;
+
+
+$state-color:(
+  success: #00d0a0,
+  alert: #ffc400,
+  error: #d50000,
+)!default;
+
+$font-family: '-apple-system', BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 'Arial', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

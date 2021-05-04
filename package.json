@@ -1,0 +1,15 @@
+{
+  "name": "kuku-ui-style-guide",
+  "version": "1.0.0",
+  "description": "style guide for kuku-ui ",
+  "main": "index.scss",
+  "scripts": {
+    "start": "node-sass -w index.scss  dest/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,25 @@
+// function for create shades
+//$baseColor: base color
+@function GenerateColorShade($baseColor, $lightenPercent: 10%, $darkPercent: 10%) {
+    @return (light: lighten($baseColor, $lightenPercent),
+        main: $baseColor,
+        dark: darken($baseColor, $darkPercent),
+    );
+}
+
+@function hexToRGB($hexColor) {
+    @return rgb($hexColor, 1);
+}
+
+
+@function GetColor($colorList, $paletteName, $colorKey: 'main') {
+    @if($paletteName){
+        $palette: map-get($colorList, $paletteName);
+        $color : var(--#{$PREEFIX}-#{$paletteName}-#{$colorKey}, map-get($palette, $colorKey));
+        @return $color;
+    }@else{
+        $color : var(--#{$PREEFIX}-#{$colorKey}, map-get($colorList, $colorKey));
+        @return $color;
+    }
+    
+}

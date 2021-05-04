@@ -1,0 +1,7 @@
+@import './functions/function';
+@import './mixins/mixins';
+@import './variables';
+
+@mixin ApplyKuKUStyles($colorList: $base-colors) {
+    @include GenerateRootVariables($colorList);
+}
